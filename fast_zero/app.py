@@ -13,7 +13,7 @@ def read_root():
     return {'message': 'Olár Mundo'}
 
 
-@app.get('/html', response_class=HTMLResponse)
+@app.get('/html', status_code=HTTPStatus.OK, response_class=HTMLResponse)
 def read_html():
     return """
     <html>
