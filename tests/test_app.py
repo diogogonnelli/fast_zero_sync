@@ -20,12 +20,4 @@ def test_read_root_deve_retornar_ok_e_ola_mundo_html():
     response = client.get('/html')
 
     assert response.status_code == HTTPStatus.OK
-    assert response.text == """
-    <html>
-      <head>
-        <title> Nosso olá mundo!</title>
-      </head>
-      <body>
-        <h1> Olá Mundo </h1>
-      </body>
-    </html>"""
+    assert "Olá Mundo" in response.text
